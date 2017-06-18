@@ -3,188 +3,204 @@
 <html>
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!--<link href="assets/css/reset.css" rel="stylesheet" type="text/css">-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
     </script>
-
-    <title>
-    </title>
+<script src="assets/javascript/app.js">
+    </script>
+    <title>UNC Trivia Game</title>
 </head>
 
 <body>
-<!--Title and instructions with UNC Images-->
+    <!--Title and instructions with UNC Images-->
+
+
     <div class="container-fluid">
-        <div class= "col-lg-12 page-header">
-        <h1>UNIVERSITY OF NORTH CAROLINA CHAPEL HILL TRIVIA GAME</h1>
-        <div class="logos">
-        <img class="png" src="assets/images/UNClogo.png">
-        <img class="png" src="assets/images/UNClettersLogo.png">
-        <img class="png" src="assets/images/UNCramLogo.png">
-        <img class="png" src="assets/images/KIH.png">
+        <div class="col-lg-12 page-header">
+            <h1>UNIVERSITY OF NORTH CAROLINA CHAPEL HILL TRIVIA GAME</h1>
+
+
+            <div class="logos"><img alt="UNCLogo" class="png" src="assets/images/UNClogo.png"> <img alt="UNClettersLogo" class="png" src="assets/images/UNClettersLogo.png"> <img alt="UNCramLogo" class="png" src="assets/images/UNCramLogo.png"> <img alt="KIH" class="png" src="assets/images/KIH.png"></div>
+
+
+            <h2>You have 120 seconds to answer the following ten questions related to UNC-Chapel Hill. Once you are done hit the submit button to see how well you did!</h2>
         </div>
-        <h2>You have 60 seconds to answer the following ten questions related to UNC-Chapel Hill. Once you are done hit the submit button to see how well you did!</h2>
+        <!--Places start button before question 1-->
+
+
+        <div class="col-lg-12 text-center">
+            <button class="btn btn-default btn-lg" id="start" name="singlebutton">START!</button>
         </div>
-<!--Places start button before question 1-->        
-        <div class="col-lg-12 text-center"> 
-    <button id="singlebutton" name="singlebutton" class="btn btn-default btn-lg">START!</button> 
-</div>
-        <br>
-<!--Question 1 on its own row with only one column-->
+
+
+        <div id="timeLeft">
+        </div>
+        <!--Question 1 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q1">
-            <h5>1. When was the University of North Carolina at Chapel Hill founded?</h5>
+            <div id="q1">
+                <h5>1. When was the University of North Carolina at Chapel Hill founded?</h5>
 
 
-            <form>
-                <input name="founded" type="radio" value="December 15, 1789"> December 15, 1789<br>
-                <input name="founded" type="radio" value="December 21, 1789"> December 21, 1789<br>
-                <input name="founded" type="radio" value="December 11, 1789"> December 11, 1789<br>
-                <input name="founded" type="radio" value="December 20, 1789"> December 20, 1789
-            </form>
+                <form>
+                    <input name="founded" type="radio" value="December 15, 1789"> December 15, 1789<br>
+                    <input name="founded" type="radio" value="December 21, 1789"> December 21, 1789<br>
+                    <input name="founded" type="radio" value="December 11, 1789"> December 11, 1789<br>
+                    <input name="founded" type="radio" value="December 20, 1789"> December 20, 1789
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!--Question 2 on its own row with only one column-->
+        <!--Question 2 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q2">
-            <h5>2. What University of North Carolina symbol is based on the Temple of Love in the Gardens of Versailles?</h5>
+            <div id="q2">
+                <h5>2. What University of North Carolina symbol is based on the Temple of Love in the Gardens of Versailles?</h5>
 
 
-            <form>
-                <input name="symbol" type="radio" value="Old Well"> Old Well<br>
-                <input name="symbol" type="radio" value="Bell Tower"> Bell Tower<br>
-                <input name="symbol" type="radio" value="Chapel"> Chapel<br>
-                <input name="symbol" type="radio" value="Conservatorium"> Conservatorium
-            </form>
+                <form>
+                    <input name="symbol" type="radio" value="Old Well"> Old Well<br>
+                    <input name="symbol" type="radio" value="Bell Tower"> Bell Tower<br>
+                    <input name="symbol" type="radio" value="Chapel"> Chapel<br>
+                    <input name="symbol" type="radio" value="Conservatorium"> Conservatorium
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!--Question 3 on its own row with only one column-->
+        <!--Question 3 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q3">
-            <h5>3. "The Daily Tar Heel", a student run newspaper, was first called the The Tar Heel?</h5>
+            <div id="q3">
+                <h5>3. "The Daily Tar Heel", a student run newspaper, was first called the The Tar Heel?</h5>
 
 
-            <form>
-                <input name="paper" type="radio" value="true"> True<br>
-                <input name="paper" type="radio" value="false"> False
-            </form>
+                <form>
+                    <input name="paper" type="radio" value="true"> True<br>
+                    <input name="paper" type="radio" value="false"> False
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!--Question 4 on its own row with only one column-->
+        <!--Question 4 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q4">
-            <h5>4. Who was the first Presiding Professor for the University of North Carolina?</h5>
+            <div id="q4">
+                <h5>4. Who was the first Presiding Professor for the University of North Carolina?</h5>
 
 
-            <form>
-                <input name="professor" type="radio" value="Charles Wilson Harris"> Charles Wilson Harris<br>
-                <input name="professor" type="radio" value="David Ker"> David Ker<br>
-                <input name="professor" type="radio" value="Joseph Caldwell"> Joseph Caldwell<br>
-                <input name="professor" type="radio" value="James Smiley Gillaspie"> James Smiley Gillaspie
-            </form>
+                <form>
+                    <input name="professor" type="radio" value="Charles Wilson Harris"> Charles Wilson Harris<br>
+                    <input name="professor" type="radio" value="David Ker"> David Ker<br>
+                    <input name="professor" type="radio" value="Joseph Caldwell"> Joseph Caldwell<br>
+                    <input name="professor" type="radio" value="James Smiley Gillaspie"> James Smiley Gillaspie
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!--Question 5 on its own row with only one column-->
+        <!--Question 5 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q5">
-            <h5>5. On the North Carolina campus resides the Morehead-Patterson Bell Tower. How many bells are inside of the bell tower?</h5>
+            <div id="q5">
+                <h5>5. On the North Carolina campus resides the Morehead-Patterson Bell Tower. How many bells are inside of the bell tower?</h5>
 
 
-            <form>
-                <input name="bells" type="radio" value="14"> 14<br>
-                <input name="bells" type="radio" value="4"> 4<br>
-                <input name="bells" type="radio" value="7"> 7<br>
-                <input name="bells" type="radio" value="1"> 1
-            </form>
+                <form>
+                    <input name="bells" type="radio" value="14"> 14<br>
+                    <input name="bells" type="radio" value="4"> 4<br>
+                    <input name="bells" type="radio" value="7"> 7<br>
+                    <input name="bells" type="radio" value="1"> 1
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!--Question 6 on its own row with only one column-->
+        <!--Question 6 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q6">
-            <h5>6. What street do fans converge upon to celebrate after a UNC win?</h5>
+            <div id="q6">
+                <h5>6. What street do fans converge upon to celebrate after a UNC win?</h5>
 
 
-            <form>
-                <input name="street" type="radio" value="Wilmington"> Wilmington<br>
-                <input name="street" type="radio" value="Fayetteville"> Fayetteville<br>
-                <input name="street" type="radio" value="Glenwood"> Glenwood<br>
-                <input name="street" type="radio" value="Franklin"> Franklin
-            </form>
+                <form>
+                    <input name="street" type="radio" value="Wilmington"> Wilmington<br>
+                    <input name="street" type="radio" value="Fayetteville"> Fayetteville<br>
+                    <input name="street" type="radio" value="Glenwood"> Glenwood<br>
+                    <input name="street" type="radio" value="Franklin"> Franklin
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!--Question 7 on its own row with only one column-->
+        <!--Question 7 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q7">
-            <h5>7. North Carolina is in a rivarly called the South's Oldest Rivalry. What is the other team in that rivalry?</h5>
+            <div id="q7">
+                <h5>7. North Carolina is in a rivarly called the South's Oldest Rivalry. What is the other team in that rivalry?</h5>
 
 
-            <form>
-                <input name="rival" type="radio" value="Duke University"> Duke University<br>
-                <input name="rival" type="radio" value="University of Virginia"> University of Virginia<br>
-                <input name="rival" type="radio" value="Wake Forest University"> Wake Forest University<br>
-                <input name="rival" type="radio" value="North Carolina State University"> North Carolina State University
-            </form>
+                <form>
+                    <input name="rival" type="radio" value="Duke University"> Duke University<br>
+                    <input name="rival" type="radio" value="University of Virginia"> University of Virginia<br>
+                    <input name="rival" type="radio" value="Wake Forest University"> Wake Forest University<br>
+                    <input name="rival" type="radio" value="North Carolina State University"> North Carolina State University
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!--Question 8 on its own row with only one column-->
+        <!--Question 8 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q8">
-            <h5>8. "Hark the sound of Tar Heel voices Ringing clear and true. Singing Carolina's praises. Shouting N-C-U. Hail to the brightest star of all"<br> What verse comes next in Hark The Sound, 
-            the alma mater of the University of North Carolina at Chapel Hill?</h5>
+            <div id="q8">
+                <h5>8. "Hark the sound of Tar Heel voices Ringing clear and true. Singing Carolina's praises. Shouting N-C-U. Hail to the brightest star of all"<br>
+                What verse comes next in Hark The Sound, the alma mater of the University of North Carolina at Chapel Hill?</h5>
 
 
-            <form>
-                <input name="hark" type="radio" value=" Clear it's radiant shine"> Clear it's radiant shine<br>
-                <input name="hark" type="radio" value=" Clear it's radiance gleam"> Clear it's radiance gleam<br>
-                <input name="hark" type="radio" value="Clear it's radiant gleam"> Clear it's radiant gleam<br>
-                <input name="hark" type="radio" value="Clear it's radiance shine"> Clear it's radiance shine
-            </form>
+                <form>
+                    <input name="hark" type="radio" value=" Clear it's radiant shine"> Clear it's radiant shine<br>
+                    <input name="hark" type="radio" value=" Clear it's radiance gleam"> Clear it's radiance gleam<br>
+                    <input name="hark" type="radio" value="Clear it's radiant gleam"> Clear it's radiant gleam<br>
+                    <input name="hark" type="radio" value="Clear it's radiance shine"> Clear it's radiance shine
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!--Question 9 on its own row with only one column-->
+        <!--Question 9 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q9">
-            <h5>9. What is the University of North Carolina's mascot?</h5>
+            <div id="q9">
+                <h5>9. What is the University of North Carolina's mascot?</h5>
 
 
-            <form>
-                <input name="mascot" type="radio" value="Tar Heels"> Tar Heels<br>
-                <input name="mascot" type="radio" value="Rameses"> Rameses<br>
-                <input name="mascot" type="radio" value="Goats"> Goats<br>
-                <input name="mascot" type="radio" value="Michael Jordan"> Michael Jordan
-            </form>
+                <form>
+                    <input name="mascot" type="radio" value="Tar Heels"> Tar Heels<br>
+                    <input name="mascot" type="radio" value="Rameses"> Rameses<br>
+                    <input name="mascot" type="radio" value="Goats"> Goats<br>
+                    <input name="mascot" type="radio" value="Michael Jordan"> Michael Jordan
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!--Question 10 on its own row with only one column-->
+        <!--Question 10 on its own row with only one column-->
+
+
         <div class="col-lg-12 questionBorder">
-        <div id="q10">
-            <h5>10. What President of the United States attended the University of North Carolina at Chapel Hill?</h5>
+            <div id="q10">
+                <h5>10. What President of the United States attended the University of North Carolina at Chapel Hill?</h5>
 
 
-            <form>
-                <input class="btn btn-default" name="president" type="radio" value="James K. Polk"> James K. Polk<br>
-                <input class="btn btn-default" name="president" type="radio" value="Andrew Johnson"> Andrew Johnson<br>
-                <input class="btn btn-default" name="president" type="radio" value="Zachary Taylor"> Zachary Taylor<br>
-                <input class="btn btn-default" name="president" type="radio" value="Andrew Jackson"> Andrew Jackson
-            </form>
+                <form>
+                    <input class="btn btn-default" name="president" type="radio" value="James K. Polk"> James K. Polk<br>
+                    <input class="btn btn-default" name="president" type="radio" value="Andrew Johnson"> Andrew Johnson<br>
+                    <input class="btn btn-default" name="president" type="radio" value="Zachary Taylor"> Zachary Taylor<br>
+                    <input class="btn btn-default" name="president" type="radio" value="Andrew Jackson"> Andrew Jackson
+                </form>
+            </div>
         </div>
-        </div>
-        <br>
-<!-- places the submit button in the center after question 10-->
-<div class="col-lg-12 text-center"> 
-    <button id="singlebutton" name="singlebutton" class="btn btn-default btn-lg">SUBMIT!</button> 
-</div>
+        <!-- places the submit button in the center after question 10-->
 
+
+        <div class="col-lg-12 text-center">
+            <button class="btn btn-default btn-lg" id="singlebutton" name="singlebutton">SUBMIT!</button>
+        </div>
         <br>
     </div>
 </body>
