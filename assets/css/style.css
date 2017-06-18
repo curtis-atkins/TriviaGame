@@ -1,16 +1,17 @@
+/*  sets the entire page to be Carolina Blue  */
 body{
 	background-color: #007FAE;
 }
-
+/*  sets the text to below the start button to be white  */
 h5,p,form{
 	color: white;
 }
-
+/*  sets the text above to the start button to be white and center aligned  */
 h1,h2{
 	color: white;
 	text-align: center;
 }
-
+/*  sets the UNC logos above the start button to have the same height, width, spacing and a solid white border  */
 .png{
 	height:100px;
 	width: 100px;
@@ -19,6 +20,14 @@ h1,h2{
 	border: solid 1px white;
 }
 
+/*  pushes the UNC logos to the right of the left margin by 350px  */
 .logos{
 	margin-left: 350px;
+}
+
+/*  places a solid dark blue border of 5px, top and bottom margin of 10px, and bottom padding of 20 px around each question  */
+.questionBorder{
+	padding-bottom: 20px;
+	border: solid 5px #13294B;
+	margin: 10px 0px 10px 0px;
 }
