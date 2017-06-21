@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-
+$('#submit').submit(sendAnswers);
 
 //setting a variable "right" for questions that are answered correctly
 var right= 0;
@@ -60,33 +60,14 @@ action is displayed in the element with an id "timeLeft" where an h1 object is c
 
 
 function sendAnswers(){
-	var total = 10;
-	var score = 0;
-
-	//Get user input
-//$ var q1 = ("input[type=radio][name=q1]:checked").val();
-	var q1 = document.forms["quizForm"]["q1"].value;
-	var q2 = document.forms["quizForm"]["q2"].value;
-	var q3 = document.forms["quizForm"]["q3"].value;
-	var q4 = document.forms["quizForm"]["q4"].value;
-	var q5 = document.forms["quizForm"]["q5"].value;
-	var q6 = document.forms["quizForm"]["q6"].value;
-	var q7 = document.forms["quizForm"]["q7"].value;
-	var q8 = document.forms["quizForm"]["q8"].value;
-	var q9 = document.forms["quizForm"]["q9"].value;
-	var q10 = document.forms["quizForm"]["q10"].value;
-	//Validation
-	if(q1 == null || q1 == ""){
-		alert("You missed question 1");
-		return false;
-	}
+	var total = 0;
+	
+/*   $(".questionBorder").each(function(i,v){
+    //challenge answer: this line
+    total += $(v).children('input[type=radio]:checked').val() === 'correct';
+      })
+*/
+alert("You answered " + total + "questions correctly");
 }
-
-
-
-
-
-
-
 
 });
